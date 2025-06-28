@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%) !important;
+  color: #222 !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main, .hero-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  main, .hero-section {
+    min-height: 60vh;
+    padding: 2rem 0.5rem;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  .hero-section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+/* main.css - Modern, glassy, light theme for Kirna.dev */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%) !important;
+  color: #222 !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* Root variables for easy theming */
+:root {
+  --primary: #2563eb;
+  --accent: #fbbf24;
+  --bg-glass: rgba(255,255,255,0.7);
+  --border: #e5e7eb;
+  --text-main: #1e293b;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Glassy card style */
+.glass-card {
+  background: var(--bg-glass);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn, button {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover, .btn:focus, button:hover, button:focus {
+  background: #1d4ed8;
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+button:active, .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(124, 58, 237, 0.2);
+}
+
+/* Inputs */
+input, textarea {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #fff;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+}
+input:focus, textarea:focus, button:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10);
+}
+
+/* Utility classes */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.opacity-100 {
+  opacity: 1 !important;
+}
+.translate-y-0 {
+  transform: translateY(0) !important;
+}
+
+/* Responsive helpers */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 1rem;
+  }
+  .btn, button {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* Smooth scroll behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* blue glow */
+  border-color: #6366f1;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(90deg, #222 0%, #6366f1 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.10);
+  font-weight: 700;
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #6366f1 0%, #222 100%);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 6px rgba(99, 102, 241, 0.10);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Utility to hide scrollbars but keep scroll */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #7c3aed;
+  border-radius: 3px;
+}
+
+/* Shadows for cards and sections */
+.shadow-glow {
+  box-shadow: 0 0 12px 2px rgba(124, 58, 237, 0.6);
+}
+
+/* For AOS animations to look smoother */
+[data-aos] {
+  transition-property: transform, opacity;
+  transition-duration: 700ms;
+  transition-timing-function: ease-in-out;
+}
