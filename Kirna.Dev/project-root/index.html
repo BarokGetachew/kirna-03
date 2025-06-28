@@ -1,0 +1,80 @@
+<!--
+  index.html - Kirna.dev Home Page
+  Modern, glassy, light design using Tailwind CSS and modular JS components.
+  Sections: Navbar, Hero, Features, Footer. Placeholder content for easy customization.
+-->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirna.dev | Home</title>
+  <link rel="stylesheet" href="css/output.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+      color: #222;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-transparent">
+
+  <!-- Navbar placeholder (injected by navbar.js) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main content: Hero and Features -->
+  <main class="flex-grow flex flex-col items-center justify-center px-4 md:px-0 py-12 md:py-24 min-h-[70vh] w-full">
+    <!-- Hero Section -->
+    <section data-aos="fade-up" class="w-full max-w-3xl bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border border-gray-200">
+      <h1 class="text-6xl font-extrabold text-gray-900 mb-6 tracking-tight drop-shadow-lg">Your Next Big Project</h1>
+      <p class="text-gray-600 text-xl mb-10">Placeholder content: Build something amazing with a modern, clean, and minimal design. This is where your story begins.</p>
+      <a href="projects.html" class="inline-block bg-black hover:bg-gray-800 transition px-8 py-4 rounded-xl shadow-lg text-white font-bold text-lg tracking-wide">
+        Explore Projects
+      </a>
+    </section>
+    <!-- Features Section -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+      <!-- Feature Card 1 -->
+      <div class="bg-white/80 rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col items-center">
+        <div class="w-16 h-16 mb-4 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-300 flex items-center justify-center text-3xl font-bold text-white">A</div>
+        <h2 class="text-xl font-semibold mb-2 text-gray-900">Amazing Feature</h2>
+        <p class="text-gray-500 text-center">Placeholder description for a standout feature. Make your product shine here.</p>
+      </div>
+      <!-- Feature Card 2 -->
+      <div class="bg-white/80 rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col items-center">
+        <div class="w-16 h-16 mb-4 rounded-full bg-gradient-to-tr from-pink-400 to-fuchsia-300 flex items-center justify-center text-3xl font-bold text-white">B</div>
+        <h2 class="text-xl font-semibold mb-2 text-gray-900">Bold Design</h2>
+        <p class="text-gray-500 text-center">Placeholder for a beautiful, modern, and bold design element. Impress your users.</p>
+      </div>
+      <!-- Feature Card 3 -->
+      <div class="bg-white/80 rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col items-center">
+        <div class="w-16 h-16 mb-4 rounded-full bg-gradient-to-tr from-green-400 to-lime-300 flex items-center justify-center text-3xl font-bold text-white">C</div>
+        <h2 class="text-xl font-semibold mb-2 text-gray-900">Cutting Edge</h2>
+        <p class="text-gray-500 text-center">Placeholder for a cutting-edge technology or service. Show your innovation.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer placeholder (injected by footer.js) -->
+  <div id="footer-placeholder"></div>
+  <div class="w-full text-center py-6 text-gray-400 text-sm">
+    UI inspired by <a href="https://ui.aceternity.com/" class="underline hover:text-gray-600" target="_blank" rel="noopener">Aceternity UI</a>
+  </div>
+
+  <!-- Scripts: AOS for animations, navbar/footer injection -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: "ease-in-out", once: true, offset: 50 });
+  </script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+  <!-- GSAP CDN for advanced animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/gsap-animations.js"></script>
+  <script src="js/advanced-animations.js"></script>
+</body>
+</html>
